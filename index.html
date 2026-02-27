@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儿童识字小报生成器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="main-card">
+            <header class="page-header">
+                <h1>📚 儿童识字小报生成器</h1>
+                <p>专为5-9岁儿童设计的识字学习工具</p>
+            </header>
+
+            <main>
+                <!-- API 设置区 -->
+                <section class="api-settings-card">
+                    <h3>🔐 API设置</h3>
+                    <div class="api-form">
+                        <div class="form-group">
+                            <label for="api-key">Nano Banana Pro API Key：</label>
+                            <div class="api-input-wrapper">
+                                <input type="password" id="api-key" placeholder="请输入您的API密钥">
+                                <button id="save-api-key" class="save-btn">保存密钥</button>
+                            </div>
+                        </div>
+                        <div id="api-status" class="api-status hidden">密钥已保存</div>
+                    </div>
+                </section>
+
+                <!-- 主输入区 -->
+                <section class="input-section">
+                    <div class="form-group">
+                        <label for="theme">主题/场景：</label>
+                        <input type="text" id="theme" placeholder="例如：超市、医院、公园、动物园等">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">小报标题：</label>
+                        <input type="text" id="title" placeholder="例如：《走进超市》《快乐医院》">
+                    </div>
+                </section>
+
+                <!-- 识字词汇预览区 -->
+                <section class="word-preview-section">
+                    <h3>📖 识字词汇预览</h3>
+                    <div id="word-preview-grid" class="word-grid">
+                        <!-- 词汇卡片将动态插入这里 -->
+                    </div>
+                </section>
+
+                <!-- 底部操作按钮区 -->
+                <footer class="action-footer">
+                    <button id="regenerate-words" class="secondary-btn">🔄 重新生成词汇</button>
+                    <button id="generate-btn" class="primary-btn">🎨 生成识字小报</button>
+                </footer>
+
+                <!-- 结果显示区 -->
+                <section class="result-section">
+                    <div id="loading" class="hidden">
+                        <p>正在生成中，请稍候...</p>
+                        <div class="spinner"></div>
+                    </div>
+
+                    <div id="result" class="hidden">
+                        <h3>生成结果</h3>
+                        <div id="image-container">
+                            <!-- 图像将在这里显示 -->
+                        </div>
+                        <button id="download-btn" class="hidden">下载图片</button>
+                    </div>
+
+                    <div id="error" class="hidden error-message">
+                        <!-- 错误消息将在这里显示 -->
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "children-character-poster-generator",
+  "version": "1.0.0",
+  "description": "一个为儿童创建识字小报的生成器，使用AI技术生成带拼音标签的教育图片",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "education",
+    "children",
+    "learning",
+    "chinese-characters",
+    "poster-generator",
+    "ai-generated-images"
+  ],
+  "author": "Claude Code Assistant",
+  "license": "MIT"
+}
